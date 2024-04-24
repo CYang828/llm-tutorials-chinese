@@ -1,0 +1,16 @@
+python p_tuning.py \
+    --model "bert-base-chinese" \
+    --train_path "data/comment_classify/train.txt" \
+    --dev_path "data/comment_classify/dev.txt" \
+    --verbalizer "data/comment_classify/verbalizer.txt" \
+    --save_dir "checkpoints/comment_classify/" \
+    --img_log_dir "logs/comment_classify" \
+    --img_log_name "BERT" \
+    --batch_size 8 \
+    --max_seq_len 128 \
+    --valid_steps 20  \
+    --logging_steps 5 \
+    --num_train_epochs 20 \
+    --max_label_len 2 \
+    --p_embedding_num 15 \
+    --device "cuda:0"
